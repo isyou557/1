@@ -3,11 +3,30 @@
   $("li.active").removeClass("active");
   $(e.target).addClass("active");
 })
-
-var $lunbo = $("#lunbo");
+var imgurl = [
+  {name:"img1",url:"https://via.placeholder.com/540x265.png?text=1/O https://placeholder.com/"},
+  {name:"img2",url:"https://via.placeholder.com/540x265.png?text=2/O https://placeholder.com/"},
+  {name:"img3",url:"https://via.placeholder.com/540x265.png?text=3/O https://placeholder.com/"},
+  {name:"img4",url:"https://via.placeholder.com/540x265.png?text=4/O https://placeholder.com/"},
+  // {name:"img5",url:"https://via.placeholder.com/540x265.png?text=5/O https://placeholder.com/"},
+]
 var $limg = $("#limg")
-var $num = 4 ;
+var $imgNum = imgurl.length ;
 var $imgWidth = 540;
+var $limg_html = '';
+for(var elem of imgurl){
+  $limg_html += `<img src=${elem.url}>`;
+}
+$limg.html($limg_html).css("left",-$imgWidth*($imgNum-1));
+
+var $lbtn = $("#lbtn");
+var $lbtn_html = '';
+for(var i = 0;i<imgurl.length;i++){
+  $lbtn_html +=`<li data-num="${i}"></li>`
+}
+$lbtn.html($lbtn_html)
+var $lunbo = $("#lunbo");
+var $num = $imgNum-1;
 $lunbo.mouseenter(function(){
   $("#lunbo>ol>li").css("background-color","#000");
 }).mouseleave(function(){
@@ -15,8 +34,8 @@ $lunbo.mouseenter(function(){
 })
 $("#lunbo>ol>li").click(function(){
   $num += $(this).data("num");
-  if($num < 0){$num = 4;}
-  if($num > 4){$num = 0;}
+  if($num < 0){$num = $imgNum-1;}
+  if($num > $imgNum-1){$num = 0;}
   $limg.css("left",-$num*$imgWidth);
 })
 $(".wrap2>div>ul>li").mouseover(function(e){
