@@ -20,8 +20,8 @@ $("#lunbo>ol>li").click(function(){
   $limg.css("left",-$num*$imgWidth);
 })
 $(".wrap2>div>ul>li").mouseover(function(e){
-  var $num =  e.target.className;
-  $num = parseInt($num);
+  // var$num =  e.target.className;
+  $num = parseInt($(this).data("num"));
   $limg.css("left",-$num*$imgWidth);
 })
 
