@@ -89,10 +89,11 @@ div.w-80{
   margin-top: 20px;
 }
 .wrap2>div,.wrap4>div{
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   width: 540px;
   height: 267px;
-  /* padding-left: 8px; */
+  padding: 0;
+  margin: 0;
   background-color: #fff;
   overflow: hidden;
   position: relative;
@@ -103,7 +104,6 @@ div.w-80{
 .wrap2>div>ul{
   list-style:none;
   position: absolute;
-  /* bottom: 0px; */
   top: 220px;
   left: 200px;
 }
@@ -118,7 +118,6 @@ div.w-80{
   width: 25px;
   height: 50px;
   border-radius: 3px;
-  /* background-color: #000; */
   
 }
 #liRight{
@@ -143,10 +142,6 @@ div.w-80{
   background-color: #fff;
   margin-top: 20px;
 }
-#lunbo{
-  /* position: relative; */
-  margin: 0;
-}
 #limg>img{
   margin: 0;
   padding: 0;
@@ -154,7 +149,7 @@ div.w-80{
 #limg{
   padding: 0;
   position: absolute;
-  left: -2178px;
+  left: -2160px;
 }
 table {
   width: 100%;

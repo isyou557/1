@@ -5,34 +5,24 @@
 })
 
 var $lunbo = $("#lunbo");
-var $liLeft = $("#liLeft");
-var $liRight = $("#liRight");
 var $limg = $("#limg")
-var num = 5 ;
+var $num = 4 ;
+var $imgWidth = 540;
 $lunbo.mouseenter(function(){
-$liLeft.css("background-color","#000");
-$liRight.css("background-color","#000");
+  $("#lunbo>ol>li").css("background-color","#000");
+}).mouseleave(function(){
+  $("#lunbo>ol>li").css("background-color","");
 })
-$lunbo.mouseleave(function(){
-$liLeft.css("background-color","");
-$liRight.css("background-color","")
-})
-
-$liRight.click(function(){
-num --;
-if(num < 0){num = 4;}
-$limg.css("left",num*(-544.5));
-})
-$liLeft.click(function(){
-num ++;
-if(num > 4){num = 0;}
-$limg.css("left",num*(-544.5));
+$("#lunbo>ol>li").click(function(){
+  $num += $(this).data("num");
+  if($num < 0){$num = 4;}
+  if($num > 4){$num = 0;}
+  $limg.css("left",-$num*$imgWidth);
 })
 $(".wrap2>div>ul>li").mouseover(function(e){
-var num2 =  e.target.className;
-num2 = parseInt(num2);
-$limg.css("left",num2*(-544.5));
-num = num2;
+  var $num =  e.target.className;
+  $num = parseInt($num);
+  $limg.css("left",-$num*$imgWidth);
 })
 
 $.ajax({
@@ -40,8 +30,6 @@ $.ajax({
   type:"get",
   dataType:"json"
 }).then(function(res){
-// console.log(res.data.xAxis);
-// console.log(res.data.series);
 var myWr3= echarts.init(document.getElementById("main"));
 option = {
   title: {
