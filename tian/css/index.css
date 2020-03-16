@@ -149,7 +149,7 @@ div.w-80{
 #limg{
   padding: 0;
   position: absolute;
-  left: -2160px;
+  left: 0;
 }
 table {
   width: 100%;

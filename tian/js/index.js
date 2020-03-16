@@ -8,7 +8,12 @@ var imgurl = [
   {name:"img2",url:"https://via.placeholder.com/540x265.png?text=2/O https://placeholder.com/"},
   {name:"img3",url:"https://via.placeholder.com/540x265.png?text=3/O https://placeholder.com/"},
   {name:"img4",url:"https://via.placeholder.com/540x265.png?text=4/O https://placeholder.com/"},
-  // {name:"img5",url:"https://via.placeholder.com/540x265.png?text=5/O https://placeholder.com/"},
+  {name:"img5",url:"https://via.placeholder.com/540x265.png?text=5/O https://placeholder.com/"},
+  {name:"img5",url:"https://via.placeholder.com/540x265.png?text=6/O https://placeholder.com/"},
+  {name:"img5",url:"https://via.placeholder.com/540x265.png?text=7/O https://placeholder.com/"},
+  // {name:"img5",url:"https://via.placeholder.com/540x265.png?text=7/O https://placeholder.com/"},
+  // {name:"img5",url:"https://via.placeholder.com/540x265.png?text=7/O https://placeholder.com/"},
+  // {name:"img5",url:"https://via.placeholder.com/540x265.png?text=7/O https://placeholder.com/"},
 ]
 var $limg = $("#limg")
 var $imgNum = imgurl.length ;
@@ -17,14 +22,16 @@ var $limg_html = '';
 for(var elem of imgurl){
   $limg_html += `<img src=${elem.url}>`;
 }
-$limg.html($limg_html).css("left",-$imgWidth*($imgNum-1));
+$limg.html($limg_html);
+// .css("left",-$imgWidth*($imgNum-1));
 
 var $lbtn = $("#lbtn");
 var $lbtn_html = '';
 for(var i = 0;i<imgurl.length;i++){
   $lbtn_html +=`<li data-num="${i}"></li>`
 }
-$lbtn.html($lbtn_html)
+//根据图片个数给li 并重新计算ul位置
+$lbtn.html($lbtn_html).css("left",($imgWidth-80-16*$imgNum)/2)
 var $lunbo = $("#lunbo");
 var $num = $imgNum-1;
 $lunbo.mouseenter(function(){
