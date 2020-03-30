@@ -1,0 +1,223 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #f5f8f9;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+}
+/* 头部居中div */
+header>div{
+    width: 1120px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 内容布局 */
+.container{
+    width: 1120px;
+    margin: 110px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.container-item{
+    background: #fff;
+}
+
+.container-item1,.container-item2{
+    background: none;
+}
+/* item2 右导航栏 */
+.container-item2 ul{
+    float: right;
+}
+.container-item2 ul li{
+    float: left;
+    font-size: 12px;
+    padding-top: 20px;
+    margin-left: 11px;
+    line-height: 20px;
+    font-weight: bold;
+    cursor:pointer;
+    user-select:none;
+}
+
+.container-item2 ul li.active,.container-item2 ul li:hover{
+    font-size: 13px;
+    border-bottom: 2px solid #cccfd0;
+}
+
+/* item3轮播图样式 */
+.container-item3{
+    width: 560px;
+    height: 285px;
+    position: relative;
+    /* padding: 10px; */
+    /* overflow: hidden; */
+}
+
+/* 图片 */
+.container-item3-img img{
+    position: absolute;
+    margin: 10px;
+    height: 265px;
+    /* transition: 0.9s; */
+    opacity: 0;
+    z-index: 5;
+}
+.container-item3-img a:nth-child(1) img{
+    opacity: 1;
+}
+/* 左右按钮 */
+.container-item3 span{
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 50px;
+    background: rgba(28, 31, 33,0.7);
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 100;  
+    cursor:pointer;
+    user-select:none;
+}
+
+.container-item3 span.left{
+    top: 40%;
+    left: 18px;
+}
+.container-item3 span.right{
+    top: 40%;
+    right: 18px;
+}
+.container-item3 span.left-in{
+    left: 7px;
+    transition: 0.7s;
+    opacity: 0;
+}
+.container-item3 span.right-in{
+    right: 7px;
+    transition: 0.7s;
+    opacity: 0;
+}
+
+
+/* 下小按钮 */
+.container-item3-ul{
+    position: absolute;
+    top: 230px;
+    left: 200px;
+    z-index: 10;
+}
+.container-item3-ul li{
+    display: block;
+    float: left;
+    margin-left: 4px;
+    width: 12px;
+    height: 12px;
+    background-color: #ddd;
+    border-top: 3px solid rgba(red, green, blue, 0);
+    cursor:pointer
+}
+.container-item3-ul li.active{
+    background-color: #fff;
+    border-top: 3px solid #fff;
+}
+
+/* 表格上标题 */
+.container-item4-title{
+    width: 100%;
+    height: 20%;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+.container-item4-table{
+    width: 100%;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: 0px;
+    text-align: center;
+}
+.container-item4-table tr{
+    height: 50px;
+}
+
+.container-item5{
+    grid-column: 1/3;
+}
+.container-item5,.container-item6,.container-item7{
+    padding-top: 20px;
+}
+/* 底部 */
+footer{
+    width: 100%;
+    height: 253px;
+    background-color: #202124;
+    padding-top: 70px;
+    margin-top: 70px;
+    font-size: 13px;
+    font-family: "Raleway-Bold";
+    color: #fff;
+}
+footer ul,footer ul>li{
+    list-style:none;
+    margin-top: 10px;
+    cursor:pointer
+}
+.foot-text{
+    width: 1120px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* 按钮 */
+button.btn-red{
+    width: 105px; height: 30px;
+    background-color: red;
+    color: #fff;
+    font-size: 12px;
+    border: none;
+    border-radius: 2px;
+    cursor:pointer;
+}
+
+button.btn-success{
+    width: 65px; height: 30px;
+    background-color: green;
+    color: #fff;
+    font-size: 12px;
+    border: none;
+    border-radius: 2px;
+    cursor:pointer;
+}
+
+button.btn-white{
+    width: 95px;
+    height: 40px;
+    border:2px solid #ddd;
+    border-radius: 2px;
+    cursor:pointer;
+}

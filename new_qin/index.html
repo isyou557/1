@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="./js/echarts.min.js"></script>
+        <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header>
+        <div class="w-80">
+            <button class="btn-red">Logo</button>
+            <div>
+                <i>设置</i>
+                <i>提醒</i>
+                <button class="btn-red">Log Out</button>
+            </div>
+        </div>
+    </header>
+    <!-- 内容开始 -->
+    <main class="container">
+
+        <!-- 左内标题 -->
+        <div class="container-item container-item1">
+            <h3>Audience Overview</h3>
+            <p style="color:#777b7e;font-size: 12px;">Roseville, CA</p>
+        </div>
+
+        <!-- 右导航 -->
+        <div class="container-item container-item2">
+            <ul id="subnav">
+                <li  class="active">DASHBOARD</li>
+                <li class="">PROJECTS</li>
+                <li class="">CALENDAR</li>
+                <li class="">MAILBOX</li>
+                <li class="">SETTINGS</li>
+            </ul>
+        </div>
+
+        <!-- 轮播 -->
+        <div class="container-item container-item3">
+            <div id="limg" class="container-item3-img">
+                <!-- <a href="#"><img style="opacity: 1;" src="./img/540x265.png"></a> -->
+            </div>
+                <span class="left">&lt;</span>
+                <span class="right">&gt;</span>
+                <ul id="lbtn" class="container-item3-ul">
+                    <li data-num="4"></li>
+                    <li data-num="3"></li>
+                    <li data-num="2"></li>
+                    <li data-num="1"></li>
+                    <li data-num="0"></li>
+                </ul>
+        </div>
+
+        <!-- 表格 -->
+        <div class="container-item container-item4">
+            <div class="container-item4-title">
+                <div><span>Support Requests</span></div>
+                <button class="btn-white">View All</button>
+            </div>
+            <div>
+                <table id="contable" class="container-item4-table">
+                  <!-- <tr>
+                    <th>TIME</th>
+                    <th>USER NAME</th>
+                    <th>STATUS</th>
+                  </tr>
+                  <tr>
+                    <td>9:45 pm</td>
+                    <td>info@design.com</td>
+                    <td><button class="btn-success">solved</button></td>
+                  </tr>
+                  <tr>
+                    <td>9:45 pm</td>
+                    <td>info@design.com</td>
+                    <td><button class="btn-success">solved</button></td>
+                  </tr> -->
+                </table>
+              </div>
+        </div>
+
+        <!-- 折线图 -->
+        <div class="container-item container-item5">
+            <div id="main" style="width:1065px; height:300px;"></div>
+        </div>
+
+        <!-- 饼状图 -->
+        <div class="container-item container-item6">
+            <div id="main1" style="width: 540px; height: 300px;"></div>
+        </div>
+        
+        <!-- 树状图 -->
+        <div class="container-item container-item7">
+            <div id="main2" style="width: 540px; height: 300px;"></div>
+        </div>
+    </main>
+    <!-- 内容结束 -->
+
+    <footer>
+        <div class="foot-text">
+            <ul>
+                <li><button class="btn-red">Logo</button></li>
+            </ul>
+            <ul>
+                <li>NEWS</li>
+                <li>CHANNELS</li>
+                <li>OVERVIEW</li>
+                <li>TIMELINE</li>
+            </ul>
+            <ul>
+                <li>SPORT</li>
+                <li>CULTURE</li>
+                <li>NATURE</li>
+                <li>MUSIC</li>
+            </ul>
+            <ul>
+                <li>WEATHER</li>
+                <li>AUTOS</li>
+                <li>LOCAL</li>
+                <li>SHOP</li>
+            </ul>
+            <ul>
+                <li>FUTURE</li>
+                <li>FOOD</li>
+                <li>EARTH</li>
+                <li>TV</li>
+            </ul>
+            <ul>
+                <li>TRAVEL</li>
+                <li>RADIO</li>
+            </ul>     
+        </div>
+    </footer>
+<script src="./js/jquery-3.2.1.js"></script>
+<script src="./js/item3.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>
